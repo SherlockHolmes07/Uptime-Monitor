@@ -21,17 +21,16 @@ const server = http.createServer((req, res) => {
   //Getting the query string as an object
   const queryStringObject = parsedUrl.query;
 
+  //Parsing headers
+  const headers = req.headers;
+
   //Returning the response
   res.end("Hello World");
 
   //logging the path
   console.log(
-    "Request received on Path:",
-    trimmedPath,
-    "using method:",
-    method,
-    " with query:",
-    queryStringObject
+    "parsing header:",
+    headers
   );
 });
 
